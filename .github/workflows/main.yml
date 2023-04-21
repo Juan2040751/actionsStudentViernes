@@ -22,3 +22,9 @@ jobs:
 
     - name: Run tests
       run: npm test
+
+    - name: Create container
+      run: docker build -t test .
+
+    - name: Run container
+      run: docker run test
